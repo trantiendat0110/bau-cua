@@ -1,0 +1,116 @@
+#app {
+    text-align: center;
+    margin: 50px;
+    .show {
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+        .card {
+            padding: 20px;
+            box-shadow: 0 0 5px 1px rgb(197, 197, 197);
+            animation: show ease 1s;
+            border-radius: 10px;
+            img {
+                animation: show ease 1s;
+                border-radius: 10px;
+
+            }
+        }
+    }
+    .random {
+        button {
+            color: #fff;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            border: none;
+            background-color: rgb(134, 9, 9);
+            box-shadow: 0 0 4px 3px #ccc;
+        }
+        button:hover {
+            cursor: pointer;
+
+        }
+    }
+    .bets {
+        padding: 10px;
+        margin: 10px;
+            img {
+                padding: 1px;
+                margin: 20px;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 0 5px 1px rgb(184, 255, 200);
+            }
+            img:hover {
+                cursor: pointer;
+            }
+    }
+    .coins {
+        position: fixed;
+        right: 100px;
+        top: 300px;
+        .coin {
+            box-shadow: 0 0 4px 1px #ccc;
+            border-radius: 10px;
+        }
+        .coin:hover {
+            cursor: pointer;
+        }
+    }
+    .myCoin {
+        position: fixed;
+        left: 100px;
+        top: 300px;
+    }
+    .lost {
+        z-index: 1000;
+        display: none;
+        position: fixed;
+        right: 0;
+        top: 100px;
+        animation: showWinLost ease 5s;
+    }
+    .win {
+        z-index: 1000;
+        display: none;
+        position: fixed;
+        right: 0;
+        animation: showWinLost ease 5s;
+        top: 100px;
+    }
+}
+
+.active {
+    box-shadow: 0 0 5px 2px red !important;
+    color: #fff !important;
+}
+.activeCoin {
+    box-shadow: 0 0 5px 2px red !important;
+    color: rgb(179, 25, 25) !important;
+}
+.showWinLost {
+    display: block !important;
+}
+@keyframes show {
+    from {
+        transform: rotate(120deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+@keyframes showWinLost {
+    0% {
+        transform: translateX(400px);
+    }
+    15% {
+        transform: translateX(-100px)
+    }
+    90% {
+        transform: translateX(-120px)
+    }
+    100% {
+        transform: translateX(400px);
+    }
+}

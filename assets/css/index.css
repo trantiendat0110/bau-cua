@@ -1,0 +1,180 @@
+#app {
+  text-align: center;
+  margin: 50px;
+}
+
+#app .show {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#app .show .card {
+  padding: 20px;
+  -webkit-box-shadow: 0 0 5px 1px #c5c5c5;
+          box-shadow: 0 0 5px 1px #c5c5c5;
+  -webkit-animation: show ease 1s;
+          animation: show ease 1s;
+  border-radius: 10px;
+}
+
+#app .show .card img {
+  -webkit-animation: show ease 1s;
+          animation: show ease 1s;
+  border-radius: 10px;
+}
+
+#app .random button {
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  border: none;
+  background-color: #860909;
+  -webkit-box-shadow: 0 0 4px 3px #ccc;
+          box-shadow: 0 0 4px 3px #ccc;
+}
+
+#app .random button:hover {
+  cursor: pointer;
+}
+
+#app .bets {
+  padding: 10px;
+  margin: 10px;
+}
+
+#app .bets img {
+  padding: 1px;
+  margin: 20px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 1px #b8ffc8;
+          box-shadow: 0 0 5px 1px #b8ffc8;
+}
+
+#app .bets img:hover {
+  cursor: pointer;
+}
+
+#app .coins {
+  position: fixed;
+  right: 100px;
+  top: 300px;
+}
+
+#app .coins .coin {
+  -webkit-box-shadow: 0 0 4px 1px #ccc;
+          box-shadow: 0 0 4px 1px #ccc;
+  border-radius: 10px;
+}
+
+#app .coins .coin:hover {
+  cursor: pointer;
+}
+
+#app .myCoin {
+  position: fixed;
+  left: 100px;
+  top: 300px;
+}
+
+#app .lost {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  -webkit-animation: showWinLost ease 5s;
+          animation: showWinLost ease 5s;
+}
+
+#app .win {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  right: 0;
+  -webkit-animation: showWinLost ease 5s;
+          animation: showWinLost ease 5s;
+  top: 100px;
+}
+
+.active {
+  -webkit-box-shadow: 0 0 5px 2px red !important;
+          box-shadow: 0 0 5px 2px red !important;
+  color: #fff !important;
+}
+
+.activeCoin {
+  -webkit-box-shadow: 0 0 5px 2px red !important;
+          box-shadow: 0 0 5px 2px red !important;
+  color: #b31919 !important;
+}
+
+.showWinLost {
+  display: block !important;
+}
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes showWinLost {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  15% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  90% {
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
+  }
+  100% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+}
+
+@keyframes showWinLost {
+  0% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+  15% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  90% {
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
+  }
+  100% {
+    -webkit-transform: translateX(400px);
+            transform: translateX(400px);
+  }
+}
+/*# sourceMappingURL=index.css.map */
